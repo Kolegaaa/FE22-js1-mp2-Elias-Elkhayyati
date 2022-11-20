@@ -1,0 +1,15 @@
+.Scoreboard{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container{
+    display: none;
+
+}
+
+#spelaOm{
+    display: none;
+    width: 100px;
+}
