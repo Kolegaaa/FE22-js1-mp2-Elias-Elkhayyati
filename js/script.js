@@ -24,6 +24,9 @@ button.addEventListener('click', function(event){                    // Nör jag
   event.preventDefault();
   namn=textinput.value
   container.style.display= 'block'
+  h3.innerText= namn
+
+
 })
 //console.log(btnVal);                                                  
 btnVal.forEach((btnVal) =>                                            // Använde mig utav foreach men såklart med förståelse att den tar varje item för sig precis som en forloop , fick lite hjälp på nätet
@@ -71,32 +74,33 @@ function slutresultat(event) {                                    // Min functio
   if (datorValet1 === "Sten" && DittVal1 === "Påse") {
     resultat = "Du Vann!!";
     playerscore++;
-    h3.innerText = playerscore;
+    h3.innerText = namn + ": " + playerscore;
+
   }
   if (datorValet1 === "Sten" && DittVal1 === "Sax") {
     resultat = "Du Förlora!";
     datorscore++;
-    h33.innerText = datorscore
+    h33.innerText = 'CPU ' + datorscore;
   }
   if (datorValet1 === "Påse" && DittVal1 === "Sten") {
     resultat = "Du Förlora!";
     datorscore++;
-    h33.innerText = datorscore;
+    h33.innerText = 'CPU ' + datorscore;
   }
   if (datorValet1 === "Påse" && DittVal1 === "Sax") {
     resultat = "Du Vann!!";
     playerscore++;
-    h3.innerText = playerscore;
+    h3.innerText = namn + ": " + playerscore;
   }
   if (datorValet1 === "Sax" && DittVal1 === "Påse") {
     resultat = "Du Förlora!";
     datorscore++;
-    h33.innerText = datorscore;
+    h33.innerText = 'CPU ' + datorscore;
   }
   if (datorValet1 === "Sax" && DittVal1 === "Sten") {
     resultat = "Du Vann";
     playerscore++;
-    h3.innerText= playerscore
+    h3.innerText = namn + ": " + playerscore;
   }
   
   if (isWinner()) {                                                                         // Min isWinner function som är under men här förklarar jag också så för de kanske finns lite
